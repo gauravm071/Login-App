@@ -7,5 +7,3 @@ Screen Shots
 ![WhatsApp Image 2020-12-01 at 8 00 32 PM](https://user-images.githubusercontent.com/56672381/100753680-203e3180-3410-11eb-8307-a5160b2413f3.jpeg)
 
 
-APK file location:
-  /home/gaurav/AndroidStudioProjects/LoginApp/app/build/outputs/apk/debug
