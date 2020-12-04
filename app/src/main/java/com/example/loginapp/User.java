@@ -1,8 +1,16 @@
 package com.example.loginapp;
 
 public class User {
-    String userName,email;
-    String password;
+    String userName,email,password;
+    Boolean ifLoggedIn;
+
+    public Boolean getIfLoggedIn() {
+        return ifLoggedIn;
+    }
+
+    public void setIfLoggedIn(Boolean ifLoggedIn) {
+        this.ifLoggedIn = ifLoggedIn;
+    }
 
     public String getUserName() {
         return userName;

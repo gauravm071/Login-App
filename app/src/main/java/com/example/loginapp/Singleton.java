@@ -6,6 +6,15 @@ public class Singleton {
     private static Singleton singleton=null;
     User user;
 
+    Boolean isLoggedIn;
+
+    public Boolean getLoggedIn() {
+        return isLoggedIn;
+    }
+
+    public void setLoggedIn(Boolean loggedIn) {
+        isLoggedIn = loggedIn;
+    }
 
     private  ArrayList<User> listOfUsers= new ArrayList<>();
     private Singleton(){

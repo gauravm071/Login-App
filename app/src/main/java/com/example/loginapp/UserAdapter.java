@@ -3,7 +3,6 @@ package com.example.loginapp;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,9 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class UserAdapter extends RecyclerView.Adapter <UserAdapter.ViewHolder> {
-
+    private RecyclerViewInterface recyclerViewInterface;
     ArrayList<User>listOfUsers;
-
     @NonNull
     @Override
     public UserAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -23,7 +21,8 @@ public class UserAdapter extends RecyclerView.Adapter <UserAdapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
-    public UserAdapter(ArrayList<User> listOfUsers) {
+    public UserAdapter(RecyclerViewInterface recyclerViewInterface, ArrayList<User> listOfUsers) {
+        this.recyclerViewInterface = recyclerViewInterface;
         this.listOfUsers = listOfUsers;
     }
 
@@ -43,6 +42,12 @@ public class UserAdapter extends RecyclerView.Adapter <UserAdapter.ViewHolder> {
         TextView username,email;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    recyclerViewInterface.onClick(getAdapterPosition());
+                }
+            });
             username=itemView.findViewById(R.id.tvUserName);
             email= itemView.findViewById(R.id.tvEmail);
         }
