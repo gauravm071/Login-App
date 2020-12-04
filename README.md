@@ -1,5 +1,5 @@
 # Login-App
-A Simple Login Application . User can register and login through your username and Password.
+A Simple Login Application . User can register and login through his/her username and Password.
 
 Screen Shots
 ![WhatsApp Image 2020-12-01 at 8 00 32 PM (2)](https://user-images.githubusercontent.com/56672381/100753671-1ddbd780-3410-11eb-818b-fff013147842.jpeg)
